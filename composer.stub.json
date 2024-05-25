@@ -1,0 +1,51 @@
+{
+    "name": "lnear/:package_name",
+    "description": ":package_description",
+    "keywords": [
+        "laravel",
+        "php"
+    ],
+    "license": "Apache-2.0",
+    "homepage": "https://github.com/lnear-dev/:package_name",
+    "authors": [
+        {
+            "name": "Lanre Ajao",
+            "homepage": "https://github.com/lnear-dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lame\\:package_namespace\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Lame\\:package_namespace\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "ci-test": "vendor/bin/phpunit --coverage-text --coverage-clover=coverage.xml"
+    },
+    "require-dev": {
+        "laravel/legacy-factories": "^1.1",
+        "mockery/mockery": "^1.4",
+        "orchestra/testbench": "^7.14",
+        "vimeo/psalm": "4.24.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lame\\:package_namespace\\ServiceProvider"
+            ]
+        }
+    }
+}
